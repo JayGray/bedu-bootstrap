@@ -1,0 +1,29 @@
+# Bun
+node_modules
+bun.lockb
+*.bun
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+*~
+
+# Build
+dist/
+*.js
+*.mjs
+
+# Database
+data/
+drizzle/
+
+# Environment
+.env
+.env.local
+.env.production

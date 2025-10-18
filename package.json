@@ -1,0 +1,37 @@
+{
+    "name": "bedu-bootstrap",
+    "version": "1.0.0",
+    "module": "src/index.ts",
+    "type": "module",
+    "scripts": {
+        "dev": "bun run clean && bun run dev:css & bun run dev:server",
+        "dev:server": "bun --hot src/index.ts",
+        "dev:css": "unocss \"./src/**/*.{html,ts,tsx}\" -o ./dist/index.css --watch",
+        "start": "NODE_ENV=production bun src/index.ts",
+        "clean": "rimraf ./dist/*",
+        "db:generate": "drizzle-kit generate",
+        "db:migrate": "drizzle-kit migrate",
+        "db:push": "drizzle-kit push",
+        "db:studio": "drizzle-kit studio",
+        "postinstall": "bun postinstall.ts"
+    },
+    "devDependencies": {
+        "@iconify-json/lucide": "^1.2.19",
+        "@types/bun": "latest",
+        "@types/react": "^18.3.18",
+        "@types/react-dom": "^18.3.5",
+        "@unocss/cli": "^0.65.3",
+        "@unocss/reset": "^0.65.3",
+        "drizzle-kit": "^0.31.5",
+        "rimraf": "^6.0.1",
+        "typescript": "^5.7.3",
+        "unocss": "^0.65.3"
+    },
+    "dependencies": {
+        "@elysiajs/html": "^1.1.1",
+        "drizzle-orm": "^0.44.6",
+        "elysia": "^1.1.29",
+        "react": "^18.3.1",
+        "react-dom": "^18.3.1"
+    }
+}
